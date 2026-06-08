@@ -30,6 +30,19 @@
 ## 🚀 Быстрый запуск локально
 
 ### 1. Клонирование репозитория и переход в папку
-```bash
 git clone [https://github.com/WhysSatanic/etl-duckdb-pipeline.git](https://github.com/WhysSatanic/etl-duckdb-pipeline.git)
 cd etl-duckdb-pipeline
+
+### 2. Настройка виртуального окружения
+python -m venv venv
+# Активация (Windows PowerShell)
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+.\venv\Scripts\Activate.ps1
+# Активация (Linux/macOS)
+source venv/bin/activate
+
+### 3. Установка зависимостей
+pip install -r requirements.txt
+
+### 4. Запуск пайплайна
+python pipeline.py
