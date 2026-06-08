@@ -35,11 +35,6 @@ cd etl-duckdb-pipeline
 
 ### 2. Настройка виртуального окружения
 python -m venv venv
-# Активация (Windows PowerShell)
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
-.\venv\Scripts\Activate.ps1
-# Активация (Linux/macOS)
-source venv/bin/activate
 
 ### 3. Установка зависимостей
 pip install -r requirements.txt
