@@ -1,0 +1,36 @@
+# 🚀 Lightweight Data Pipeline: Local ETL with DuckDB & Loguru
+
+[![Python CI](https://github.com/WhysSatanic/etl-duckdb-pipeline/actions/workflows/ci.yml/badge.svg)](https://github.com/WhysSatanic/etl-duckdb-pipeline/actions)
+![Python Version](https://img.shields.io/badge/python-3.10%20%7C%203.12-blue)
+![Database](https://img.shields.io/badge/database-DuckDB-orange)
+
+Простой, но отказоустойчивый и полностью протестированный локальный ETL-пайплайн (Extract, Transform, Load) для обработки транзакционных данных. Проект разработан с акцентом на лучшие практики дата-инженерии: логирование, изоляцию окружения, автоматическое тестирование и CI/CD автоматизацию.
+
+---
+
+## 🛠 Технологический стек
+
+* **Язык разработки:** Python 3.12
+* **Хранилище данных (OLAP):** DuckDB (внутрипроцессная БД, идеальная для быстрой аналитики локальных данных)
+* **Логирование:** Loguru (структурированные логи для отслеживания этапов ETL)
+* **Тестирование:** Pytest (валидация логики трансформации и загрузки данных)
+* **CI/CD:** GitHub Actions (автоматический запуск тестов при каждом пуше в ветку `main`)
+
+---
+
+## 🏗 Архитектура и этапы ETL
+
+Пайплайн обрабатывает сырые данные о транзакциях и готовит их для аналитической отчетности:
+
+1. **Extract (Извлечение):** Имитирует получение данных, генерируя локальный CSV-файл с транзакциями (`dummy_transactions.csv`), включающий аномалии (например, отрицательные суммы).
+2. **Transform (Трансформация):** Очищает данные с помощью Python/Pandas — фильтрует некорректные транзакции (удаляет записи с отрицательными суммами) и приводит типы к единому стандарту.
+3. **Load (Загрузка):** Нативно загружает очищенный датасет в аналитическую базу данных DuckDB (`analytics.db`) в таблицу `transactions`. Если таблица уже существует, данные перезаписываются.
+
+---
+
+## 🚀 Быстрый запуск локально
+
+### 1. Клонирование репозитория и переход в папку
+```bash
+git clone [https://github.com/WhysSatanic/etl-duckdb-pipeline.git](https://github.com/WhysSatanic/etl-duckdb-pipeline.git)
+cd etl-duckdb-pipeline
