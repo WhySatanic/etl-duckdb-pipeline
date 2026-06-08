@@ -1,6 +1,5 @@
 # 🚀 Lightweight Data Pipeline: Local ETL with DuckDB & Loguru
 
-(https://github.com/WhysSatanic/etl-duckdb-pipeline/actions)
 ![Python Version](https://img.shields.io/badge/python-3.10%20%7C%203.12-blue)
 ![Database](https://img.shields.io/badge/database-DuckDB-orange)
 
