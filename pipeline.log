@@ -1,0 +1,9 @@
+2026-06-08 22:57:24.465 | INFO     | __main__:<module>:57 - Starting ETL Pipeline...
+2026-06-08 22:57:24.473 | INFO     | __main__:extract_data:23 - Created dummy source file at dummy_transactions.csv
+2026-06-08 22:57:24.481 | INFO     | __main__:extract_data:26 - Data extracted successfully from dummy_transactions.csv. Rows: 4
+2026-06-08 22:57:24.483 | INFO     | __main__:transform_data:36 - Data transformation completed. Filtered rows: 2
+2026-06-08 22:57:24.502 | INFO     | __main__:load_data:51 - Data loaded into DuckDB successfully at analytics.db
+2026-06-08 22:57:24.502 | INFO     | __main__:<module>:61 - ETL Pipeline completed successfully!
+2026-06-08 22:57:55.481 | INFO     | pipeline:transform_data:36 - Data transformation completed. Filtered rows: 2
+2026-06-08 22:57:55.483 | INFO     | pipeline:transform_data:36 - Data transformation completed. Filtered rows: 0
+2026-06-08 22:57:55.506 | INFO     | pipeline:load_data:51 - Data loaded into DuckDB successfully at C:\Users\qwe\AppData\Local\Temp\pytest-of-qwe\pytest-0\test_load_data_creates_table0\test_analytics.db
